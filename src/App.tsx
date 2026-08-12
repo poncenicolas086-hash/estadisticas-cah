@@ -15,7 +15,7 @@ export default function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio('./public/sounds/musicah.mp3');
+    audioRef.current = new Audio('/sounds/musicah.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0.2;
 
