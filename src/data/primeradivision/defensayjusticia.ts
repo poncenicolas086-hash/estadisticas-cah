@@ -1,0 +1,15 @@
+export const HISTORIAL_DYJ= [
+  { id: 1, dia: '11-07-2015', torneo: 'Torneo Primera División 2015 Fase: Única', partido: 'Huracán vs. Defensa y Justicia', final: '0 - 0', localia: 'local' },
+  { id: 2, dia: '12-03-2016', torneo: 'Torneo de Transición 2016 Fase: Primera Grupo B', partido: 'Defensa y Justicia vs. Huracán', final: '0 - 2', localia: 'visitante' },
+  { id: 3, dia: '18-03-2017', torneo: 'Torneo Primera División 2016-17 Fase: Única', partido: 'Huracán vs. Defensa y Justicia', final: '2 - 0', localia: 'local' },
+  { id: 4, dia: '29-09-2017', torneo: 'Superliga 2017-18 Fase: Única', partido: 'Defensa y Justicia vs. Huracán', final: '0 - 0', localia: 'visitante' },
+  { id: 5, dia: '03-12-2018', torneo: 'Superliga 2018-19 Fase: Única', partido: 'Huracán vs. Defensa y Justicia', final: '1 - 1', localia: 'local' },
+  { id: 6, dia: '21-09-2019', torneo: 'Superliga 2019-20 Fase: Única', partido: 'Defensa y Justicia vs. Huracán', final: '0 - 1', localia: 'visitante' },
+  { id: 7, dia: '14-02-2021', torneo: 'Copa de la Liga Profesional de Fútbol 2021 Fase: Única Zona 2', partido: 'Defensa y Justicia vs. Huracán', final: '3 - 2', localia: 'visitante' },
+  { id: 8, dia: '18-07-2021', torneo: 'Liga Profesional 2021 Fase: Única', partido: 'Huracán vs. Defensa y Justicia', final: '2 - 1', localia: 'local' },
+  { id: 9, dia: '14-06-2022', torneo: 'Liga Profesional 2022 Fase: Única', partido: 'Defensa y Justicia vs. Huracán', final: '1 - 1', localia: 'visitante' },
+  { id: 10, dia: '27-01-2023', torneo: 'Liga Profesional 2023 Fase: Única', partido: 'Defensa y Justicia vs. Huracán', final: '2 - 4', localia: 'visitante' },
+  { id: 11, dia: '11-05-2024', torneo: 'Liga Profesional 2024 Fase: Única', partido: 'Huracán vs. Defensa y Justicia', final: '3 - 1', localia: 'local' },
+  { id: 12, dia: '19-04-2025', torneo: 'Torneo Apertura 2025 Fase: Única Zona A', partido: 'Huracán vs. Defensa y Justicia', final: '1 - 1', localia: 'local' },
+  { id: 13, dia: '03-11-2025', torneo: 'Torneo Clausura 2025 Fase: Única Zona A', partido: 'Defensa y Justicia vs. Huracán', final: '1 - 3', localia: 'visitante' },
+];

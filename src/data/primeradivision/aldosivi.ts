@@ -1,0 +1,15 @@
+export const HISTORIAL_ALDOSIVI = [
+  { id: 1, dia: '03-10-1976', torneo: 'Nacional 1976 Fase: Primera Grupo C', fecha: '5', partido: 'Aldosivi vs. Huracán', final: '0 - 3', localia: 'visitante' },
+  { id: 2, dia: '24-11-1976', torneo: 'Nacional 1976 Fase: Primera Grupo C', fecha: '14', partido: 'Huracán vs. Aldosivi', final: '4 - 1', localia: 'local' },
+  { id: 3, dia: '19-09-2015', torneo: 'Torneo Primera División 2015 Fase: Única', fecha: '25', partido: 'Aldosivi vs. Huracán', final: '0 - 0', localia: 'visitante' },
+  { id: 4, dia: '24-03-2016', torneo: 'Torneo de Transición 2016 Fase: Primera Grupo B', fecha: '3', partido: 'Huracán vs. Aldosivi', final: '2 - 0', localia: 'local' },
+  { id: 5, dia: '07-05-2017', torneo: 'Torneo Primera División 2016-17 Fase: Única', fecha: '23', partido: 'Aldosivi vs. Huracán', final: '0 - 3', localia: 'visitante' },
+  { id: 6, dia: '19-08-2018', torneo: 'Superliga 2018-19 Fase: Única', fecha: '2', partido: 'Aldosivi vs. Huracán', final: '2 - 1', localia: 'visitante' },
+  { id: 7, dia: '15-02-2020', torneo: 'Superliga 2019-20 Fase: Única', fecha: '20', partido: 'Huracán vs. Aldosivi', final: '0 - 2', localia: 'local' },
+  { id: 8, dia: '03-09-2021', torneo: 'Liga Profesional 2021 Fase: Única', fecha: '10', partido: 'Huracán vs. Aldosivi', final: '2 - 0', localia: 'local' },
+  { id: 9, dia: '25-04-2022', torneo: 'Copa de la Liga Profesional de Fútbol 2022 Fase: Única Zona 2', fecha: '12', partido: 'Aldosivi vs. Huracán', final: '0 - 2', localia: 'visitante' },
+  { id: 10, dia: '07-08-2022', torneo: 'Liga Profesional 2022 Fase: Única', fecha: '12', partido: 'Aldosivi vs. Huracán', final: '0 - 1', localia: 'visitante' },
+  { id: 11, dia: '05-04-2025', torneo: 'Torneo Apertura 2025 Fase: Única Zona A', fecha: '12', partido: 'Huracán vs. Aldosivi', final: '3 - 3', localia: 'local' },
+  { id: 12, dia: '12-10-2025', torneo: 'Torneo Clausura 2025 Fase: Única Zona A', fecha: '12', partido: 'Aldosivi vs. Huracán', final: '2 - 0', localia: 'visitante' },
+  { id: 13, dia: '16-03-2026', torneo: 'Torneo Apertura 2026 Fase: Única Zona B', fecha: '11', partido: 'Aldosivi vs. Huracán', final: '0 - 0', localia: 'visitante' },
+];
