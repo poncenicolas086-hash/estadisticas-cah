@@ -1,9 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './index.css';
 import { HISTORIALES_PRIMERADIV } from './data/primeradivision/historialesPrimeradiv';
 import { EQUIPOS_PRIMERADIV } from './data/primeradivision/equiposprimeradiv';
-
-
 
 export default function App() {
   const nombreImagenEscudo = '/huracan.png';
@@ -12,7 +10,32 @@ export default function App() {
   const [equipoSeleccionado, setEquipoSeleccionado] = useState<string | null>(null);
   const [filtroLocalia, setFiltroLocalia] = useState('todos');
 
+  // Estados y referencias para la música ambiental
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  useEffect(() => {
+    audioRef.current = new Audio('./public/sounds/musicah.mp3');
+    audioRef.current.loop = true;
+    audioRef.current.volume = 0.2;
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
+  }, []);
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(e => console.log("Error al reproducir audio:", e));
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   const calcularEstadoPartido = (p: any) => {
     const [golesLocal, golesVisitante] = p.final.split('-').map((n: any) => parseInt(n.trim()));
@@ -67,7 +90,7 @@ export default function App() {
       <style>{`
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', 'Segoe UI', sans-serif; }
         body { background-color: #ffffff; color: #f1f5f9; }
-        .home-container { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background: radial-gradient(circle at 50% 0%, #ff1a1a 0%, #ffffff 65%); background-attachment: fixed; }
+        .home-container { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background: radial-gradient(circle at 50% 0%, #ff1a1a 0%, #ffffff 65%); background-attachment: fixed; position: relative; }
         
         .escudo-container { margin-bottom: 15px; animation: flotar 3s ease-in-out infinite; }
         .escudo-img { width: 400px; height: 400px; object-fit: contain; filter: drop-shadow(0 0 20px rgba(225, 29, 72, 0.4)); }
@@ -75,7 +98,6 @@ export default function App() {
         
         .titulo-principal { font-size: 2rem; font-weight: 900; letter-spacing: 1px; text-align: center; margin-bottom: 25px; text-transform: uppercase; color: #fefeff; filter: drop-shadow(0 0 15px rgba(252, 18, 18, 0.2)); }
         .titulo-principal span { color: #fc1212; }
-        
         
         .buscador-wrapper { position: relative; width: 100%; max-width: 450px; margin-bottom: 25px; }
         .input-buscador { width: 100%; padding: 15px 20px; font-size: 1rem; background: #fdfdff; border: 2px solid #f11c1c; border-radius: 14px; color: red; outline: none; transition: all 0.2s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
@@ -154,7 +176,14 @@ export default function App() {
         .fecha-txt { font-size: 0.75rem; color: #ff1010; font-weight: 500; }
 
         .marca-agua { font-size: 0.70rem; color: #1f0808ad; font-weight: 700; text-align: center; margin-top: 30px; letter-spacing: 0.5px; }
+
+        .reproductor-flotante { position: fixed; bottom: 20px; right: 20px; z-index: 100; background: #ff0000; color: #ffffff; border: 2px solid #ffffff; padding: 10px 16px; border-radius: 30px; cursor: pointer; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s; display: flex; align-items: center; gap: 8px; }
+        .reproductor-flotante:hover { transform: scale(1.05); background: #cc0000; }
       `}</style>
+
+      <button className="reproductor-flotante" onClick={toggleMusic}>
+        {isPlaying ? '⏸️ Pause' : '▶️ Play'}
+      </button>
 
       {!equipoSeleccionado ? (
         <>
