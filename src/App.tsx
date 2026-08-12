@@ -96,7 +96,7 @@ export default function App() {
         .escudo-img { width: 400px; height: 400px; object-fit: contain; filter: drop-shadow(0 0 20px rgba(225, 29, 72, 0.4)); }
         @keyframes flotar { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
         
-        .titulo-principal { font-size: 2rem; font-weight: 900; letter-spacing: 1px; text-align: center; margin-bottom: 25px; text-transform: uppercase; color: #fefeff; filter: drop-shadow(0 0 15px rgba(252, 18, 18, 0.2)); }
+        .titulo-principal { font-size: 2rem; font-weight: 900; letter-spacing: 1px; text-align: center; margin-bottom: 25px; text-transform: uppercase; color: #fefeff; text-shadow: 0 4px 15px rgba(252, 18, 18, 0.7); filter: drop-shadow(0 0 15px rgba(252, 18, 18, 0.4)); }
         .titulo-principal span { color: #fc1212; }
         
         .buscador-wrapper { position: relative; width: 100%; max-width: 450px; margin-bottom: 25px; }
