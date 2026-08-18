@@ -11,4 +11,5 @@ export const HISTORIAL_SARMIENTO = [
   { id: 10, dia: '21-05-2023', torneo: 'Liga Profesional 2023 Fase: Única', partido: 'Sarmiento (Junín) vs. Huracán', final: '0 - 0', localia: 'visitante' },
   { id: 11, dia: '04-10-2024', torneo: 'Liga Profesional 2024 Fase: Única', partido: 'Huracán vs. Sarmiento (Junín)', final: '3 - 1', localia: 'local' },
   { id: 12, dia: '14-02-2026', torneo: 'Torneo Apertura 2026 Fase: Única Zona B', partido: 'Huracán vs. Sarmiento (Junín)', final: '1 - 0', localia: 'local' },
+  { id: 13, dia: '16-08-2026', torneo: 'Torneo Clausura 2026 Fase: Única Zona B', partido: 'Sarmiento (Junín) vs. Huracán', final: '2 - 0', localia: 'visitante' },
 ];
