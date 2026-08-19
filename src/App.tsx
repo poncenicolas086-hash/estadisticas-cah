@@ -67,7 +67,7 @@ export default function App() {
           eq.nombre.toLowerCase().startsWith(busqueda.toLowerCase())
         );
 
- const obtenerPartidos = () => {
+  const obtenerPartidos = () => {
     if (!equipoSeleccionado) return [];
     const historialEquipo = HISTORIALES_PRIMERADIV[equipoSeleccionado];
     if (!historialEquipo) return [];
@@ -177,7 +177,6 @@ export default function App() {
 
       {!equipoSeleccionado ? (
         <>
-          {/* El widget ahora está únicamente dentro de la pantalla principal */}
           <WidgetCalendario />
 
           <div className="escudo-container" style={{ marginTop: '30px' }}>
