@@ -171,14 +171,15 @@ export default function App() {
         .reproductor-flotante:hover { transform: scale(1.05); background: #cc0000; }
       `}</style>
 
-       <WidgetCalendario />
-
       <button className="reproductor-flotante" onClick={toggleMusic}>
         {isPlaying ? '⏸️ Pause' : '▶️ Play'}
       </button>
 
       {!equipoSeleccionado ? (
         <>
+          {/* El widget ahora está únicamente dentro de la pantalla principal */}
+          <WidgetCalendario />
+
           <div className="escudo-container" style={{ marginTop: '30px' }}>
             <img src={nombreImagenEscudo} alt="Huracán" className="escudo-img" />
           </div>
